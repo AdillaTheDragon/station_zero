@@ -1,0 +1,16 @@
+id;название;описание;north;south;east;west;предметы;враг
+cell;Камера наблюдения;Вы приходите в себя на холодном полу. Дверь в коридор открыта.;service_tunnel;;;;;
+service_tunnel;Сервисный тоннель;Узкий коридор с трубами и кабелями.;storage;cell;;;;mutant_rat
+storage;Склад;На полу лежат несколько вещей из аварийного комплекта.;junction;service_tunnel;;;fuse|medkit_storage;
+junction;Центральный коридор;Отсюда можно попасть в техническую и исследовательскую части станции.;checkpoint;storage;laboratory;workshop;;
+workshop;Мастерская;На верстаке лежит тяжёлый гаечный ключ.;reactor;;junction;;wrench;
+reactor;Реакторный зал;Реактор выключен. На панели отсутствует предохранитель.;;workshop;;;;crawler
+checkpoint;Пост охраны;Проход дальше закрыт аварийной системой.;;junction;security_office;;;security_drone
+laboratory;Лаборатория;Разбитые колбы и оборудование разбросаны по полу.;security_office;;;junction;keycard|medkit_lab;lab_specimen
+security_office;Комната охраны;На терминале горит сообщение о блокировке станции.;command_center;laboratory;server_room;checkpoint;;
+server_room;Серверная;В одном из шкафов лежит служебный токен.;;;;security_office;admin_token;
+command_center;Командный центр;Здесь находится аварийный ключ лифта.;elevator_lobby;security_office;;;elevator_key|baton;security_guard
+elevator_lobby;Лифтовой холл;Аварийный лифт может поднять вас к ядру станции.;core_access;command_center;;;;
+core_access;Коридор к ядру;За дверью слышен шум работающей системы защиты.;core;elevator_lobby;;;;
+core;Ядро станции;Сторожевой модуль перекрывает путь к выходу.;surface;core_access;;;;warden
+surface;Поверхность;Люк открыт. Снаружи виден дневной свет.;;core;;;;

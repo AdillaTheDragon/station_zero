@@ -1,0 +1,15 @@
+@startuml
+actor Игрок
+participant Game
+
+Игрок -> Game: attack
+Game -> Game: ExecuteCommand("attack")
+Game -> Game: Attack()
+Game -> Game: вычесть урон оружия из HP врага
+alt враг жив
+  Game -> Game: вычесть урон врага из HP игрока
+else враг погиб
+  Game -> Game: enemy_defeated = true
+end
+Game --> Игрок: вывести результат боя
+@enduml

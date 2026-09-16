@@ -1,0 +1,27 @@
+@startuml
+class Game {
+  -hp_
+  -room_id_
+  -inventory_
+  -power_on_
+  -lockdown_off_
+  +Load()
+  +Run()
+  -ExecuteCommand(command)
+  -ShowMap()
+  -Move(direction)
+  -Take(item)
+  -Use(item)
+  -Attack()
+}
+
+class Item
+class Enemy
+class Room
+class UiText
+
+Game o-- Item
+Game o-- Enemy
+Game o-- Room
+Game o-- UiText
+@enduml
